@@ -558,9 +558,15 @@ body {
     color: #1F5C48;
 }
 
-img, video, audio {
+img, video {
     max-width: 100%;
     height: auto;
+}
+
+audio {
+    width: 100%;
+    max-width: 480px;
+    display: block;
 }
 #weather-box {
     margin-top: 12px;
