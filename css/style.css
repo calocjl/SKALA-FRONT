@@ -366,7 +366,21 @@ body.has-navbar {
     }
 
     body.has-navbar {
-        padding-top: 180px;
+        padding-top: 220px;
+    }
+
+    .hamster-2 {
+        width: 32px;
+        height: 32px;
+        top: 6px;
+        left: 3%;
+    }
+
+    .hamster-4 {
+        width: 32px;
+        height: 32px;
+        top: 6px;
+        right: 3%;
     }
 }
 
@@ -503,4 +517,9 @@ body {
 .tool-btn-3 {
     background-color: #C7E5DC;
     color: #1F5C48;
+}
+
+img, video, audio {
+    max-width: 100%;
+    height: auto;
 }
