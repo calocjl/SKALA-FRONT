@@ -123,7 +123,46 @@ textarea:focus {
     border-color: #8FA8D9;
     box-shadow: 0 0 0 3px rgba(143, 168, 217, 0.25);
 }
+.hobby-gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 4px 4px 16px 4px;
+    margin: 16px auto;
+    max-width: 560px;
+    scroll-snap-type: x mandatory;
+}
 
+.hobby-gallery figure {
+    flex: 0 0 140px;
+    margin: 0;
+    scroll-snap-align: start;
+}
+
+.hobby-gallery img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+.hobby-gallery figcaption {
+    font-size: 0.85rem;
+    color: #6B7A9E;
+    margin-top: 4px;
+    text-align: center;
+}
+
+.hobby-gallery figure {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hobby-gallery figure:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(90, 110, 160, 0.18);
+}
 /* 요건3-1: 회원가입 버튼 hover 부드럽게 (transition 추가) */
 input[type="submit"],
 input[type="reset"] {
