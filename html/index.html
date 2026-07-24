@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>이지영의 홈페이지</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="has-navbar">
+
+<header class="topbar">
+    <img src="media/hamster2.jpg" class="hamster hamster-2" alt="">
+    <img src="media/hamster4.jpg" class="hamster hamster-4" alt="">
+    
+<h1>이지영의 홈페이지 🏠</h1>
+<p>이지영의 프로필, 학습내용, 여행기록을 확인할 수 있습니다.</p>
+
+<nav class="topnav">
+<a href="myProfile.html">소개</a>
+<a href="myClass.html">시간표</a>
+<a href="myHoliday.html">휴일 계획</a>
+<a href="myTrip.html">여행앨범</a>
+<a href="signUp.html">회원가입</a>
+</nav>
+</header>
+
+<div class="content-layout">
+<main>
+    <div class="main-card">
+        <section>
+            <h2>📢 최근 업데이트</h2>
+            <p>여행 앨범에 대만 여행지 사진 첨부 완료! ✈️</p>
+
+            <figure>
+                <img src="media/taiwan1.webp" alt="대만 여행 사진 미리보기" width="300">
+                <figcaption>대만 여행 사진 미리보기</figcaption>
+            </figure>
+        </section>
+    </div>
+</main>
+
+<aside>
+<h2>🌤️ 날씨 & 시간</h2>
+<p>서울, 대한민국</p>
+<p>※ 실시간 날씨/시간 기능은 JavaScript를 배운 뒤 추가할 예정입니다.</p>
+<section class="mini-tools">
+    <h2>🎮 미니 게임 & 도구</h2>
+    <button class="tool-btn tool-btn-1" onclick="startUpDown()">Up-Down 게임 시작</button>
+    <button class="tool-btn tool-btn-2" onclick="startGradeCalculator()">성적 계산기 실행</button>
+    <button class="tool-btn tool-btn-3" onclick="showMyBag()">내 가방 보기</button>
+</section>
+</aside>
+</div>
+
+<footer>
+<p>문의: jjaspara1216@naver.com</p>
+</footer>
+<script src="../script/upDown.js"></script>
+<script src="../script/grade.js"></script>
+<script src="../script/bag.js"></script>
+</body>
+</html>

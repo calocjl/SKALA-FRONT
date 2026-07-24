@@ -1,0 +1,506 @@
+body {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    line-height: 1.7;
+    color: #3E4A6B;
+    background-color: #F5F7FC;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #4A5A8A;
+    background-color: #E4EAFA;
+    border: 1px solid #C9D6EF;
+    padding: 10px 18px;
+    border-radius: 10px;
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* 요건3-1: 링크 hover 부드럽게 (color도 transition에 추가) */
+a {
+    color: #5B7FBD;
+    text-decoration: none;
+    padding: 2px 4px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+a:hover {
+    background-color: #E4EAFA;
+    color: #3F5C91;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    padding: 30px 40px;
+    border-radius: 16px;
+}
+
+ul, ol, dl {
+    display: inline-block;
+    text-align: left;
+}
+
+.trip-card {
+    background-color: #EDF1FA;
+    border: 1px solid #D9E1F5;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 12px auto 20px auto;
+    text-align: center;
+    max-width: 500px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px auto;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #D9E1F5;
+}
+
+th {
+    background-color: #DCE4F7;
+    color: #3E4A6B;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #F8F9FD;
+}
+
+fieldset {
+    border: 2px solid #C9D6EF;
+    border-radius: 14px;
+    padding: 20px 25px;
+    margin: 15px auto;
+    max-width: 400px;
+    text-align: left;
+}
+
+legend {
+    font-weight: 600;
+    color: #4A5A8A;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 1rem;
+    border: 1px solid #C9D6EF;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #8FA8D9;
+    box-shadow: 0 0 0 3px rgba(143, 168, 217, 0.25);
+}
+
+/* 요건3-1: 회원가입 버튼 hover 부드럽게 (transition 추가) */
+input[type="submit"],
+input[type="reset"] {
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+input[type="submit"] {
+    background-color: #8FA8D9;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #6C87C2;
+}
+
+input[type="reset"] {
+    background-color: #E9EDF7;
+    color: #4A5A8A;
+}
+
+input[type="reset"]:hover {
+    background-color: #D9E1F5;
+}
+
+/* 요건1-2: Flexbox → Grid로 교체, 3열 바둑판 배치 */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 16px auto;
+    max-width: 560px;
+    justify-items: center;
+}
+
+.photo-gallery figure {
+    margin: 0;
+    border-radius: 12px;
+}
+
+.photo-gallery img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+.photo-gallery figcaption {
+    font-size: 0.85rem;
+    color: #6B7A9E;
+    margin-top: 4px;
+}
+
+.single-photo {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin: 16px 0;
+    flex-wrap: wrap;
+}
+
+.single-photo figure {
+    margin: 0;
+}
+
+.single-photo img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.single-photo figcaption {
+    font-size: 0.85rem;
+    color: #6B7A9E;
+    margin-top: 4px;
+    text-align: center;
+}
+
+.photo-hint {
+    font-size: 0.85rem;
+    color: #6B7A9E;
+    margin-top: -8px;
+    margin-bottom: 12px;
+}
+
+.photo-link {
+    position: relative;
+    display: block;
+}
+
+.zoom-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #4A5A8A;
+    font-size: 12px;
+    padding: 3px 7px;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.photo-link:hover .zoom-badge {
+    opacity: 1;
+}
+
+/* 요건3-2: 여행 카드 hover 시 떠오르는 효과 */
+.photo-gallery figure,
+.single-photo figure {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.photo-gallery figure:hover,
+.single-photo figure:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(90, 110, 160, 0.18);
+}
+
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #D9E1F5;
+    padding: 12px 0 8px 0;
+    z-index: 100;
+}
+
+/* 요건3-3: 헤더 타이틀 페이드인 애니메이션 */
+.topbar h1 {
+    font-size: 1.3rem;
+    padding: 4px 14px;
+    margin: 0 auto 2px auto;
+    animation: fadeInDown 0.8s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.topbar p {
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.topnav {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 8px;
+}
+.topbar {
+    overflow: hidden;
+}
+
+.hamster {
+    position: absolute;
+    border-radius: 50%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.hamster-2 {
+    width: 85px;
+    height: 85px;
+    top: 30px;
+    left: 25%;
+}
+
+.hamster-4 {
+    width: 95px;
+    height: 95px;
+    top: 30px;
+    right: 25%;
+}
+body.has-navbar {
+    padding-top: 140px;
+}
+
+/* 요건1-1: index.html main/aside 가로 배치 */
+.content-layout {
+    display: flex;
+    gap: 56px;
+    align-items: flex-start;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.content-layout main {
+    flex: 3;
+}
+
+.content-layout aside {
+    flex: 1;
+    background-color: #EDF1FA;
+    border-radius: 12px;
+    padding: 16px 20px;
+    text-align: center;
+}
+.main-card {
+    background-color: #EBF1FC;
+    border-radius: 16px;
+    padding: 24px 30px;
+    box-shadow: 0 2px 10px rgba(90, 110, 160, 0.1);
+}
+/* 요건2: 786px 이하 반응형 */
+@media (max-width: 786px) {
+    .content-layout {
+        flex-direction: column;
+    }
+
+    .topnav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .photo-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    body.has-navbar {
+        padding-top: 180px;
+    }
+}
+
+body {
+    position: relative;
+}
+
+.cloud {
+    position: absolute;
+    background-color: #C9D9F2;
+    border-radius: 50px;
+    opacity: 0.7;
+    box-shadow: 0 6px 14px rgba(90, 110, 160, 0.15);
+    pointer-events: none;
+    z-index: 1;
+    animation: cloud-float 9s ease-in-out infinite;
+}
+
+.cloud::before,
+.cloud::after {
+    content: "";
+    position: absolute;
+    background-color: inherit;
+    border-radius: 50%;
+}
+
+.cloud-sm {
+    width: 60px;
+    height: 22px;
+}
+
+.cloud-sm::before {
+    width: 30px;
+    height: 30px;
+    top: -14px;
+    left: 6px;
+}
+
+.cloud-sm::after {
+    width: 22px;
+    height: 22px;
+    top: -9px;
+    right: 5px;
+}
+
+.cloud-md {
+    width: 90px;
+    height: 32px;
+}
+
+.cloud-md::before {
+    width: 46px;
+    height: 46px;
+    top: -22px;
+    left: 10px;
+}
+
+.cloud-md::after {
+    width: 34px;
+    height: 34px;
+    top: -14px;
+    right: 8px;
+}
+
+.cloud-lg {
+    width: 120px;
+    height: 42px;
+}
+
+.cloud-lg::before {
+    width: 60px;
+    height: 60px;
+    top: -28px;
+    left: 14px;
+}
+
+.cloud-lg::after {
+    width: 46px;
+    height: 46px;
+    top: -18px;
+    right: 10px;
+}
+
+@keyframes cloud-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.home-link {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #5B7FBD;
+}
+
+.mini-tools h2 {
+    font-size: 1.1rem;
+}
+
+.tool-btn {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-weight: 600;
+    padding: 14px 16px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 6px rgba(90, 110, 160, 0.12);
+}
+
+.tool-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(90, 110, 160, 0.22);
+}
+
+.tool-btn-1 {
+    background-color: #C9D9F2;
+    color: #2F4374;
+}
+
+.tool-btn-2 {
+    background-color: #D9CDEF;
+    color: #4A3574;
+}
+
+.tool-btn-3 {
+    background-color: #C7E5DC;
+    color: #1F5C48;
+}

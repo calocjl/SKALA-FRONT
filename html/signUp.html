@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signUp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <a href="index.html" class="home-link">← 홈으로</a>
+    <form action="signUpResult.html" method="get">
+        <fieldset>
+            <legend>계정 정보</legend>
+
+            <label for="username">사용자 이름:</label>
+            <input type="text" id="username" name="username" placeholder="이름을 입력하세요" required><br><br>
+
+            <label for="email">이메일:</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required><br><br>
+
+            <label for="password">비밀번호:</label>
+            <input type="password" id="password" name="password" placeholder="8자 이상 입력" required><br><br>
+
+            <label for="job">직군:</label>
+            <select id="job" name="job">
+                <option value="frontend">프론트엔드</option>
+                <option value="backend">백엔드</option>
+                <option value="design">디자인</option>
+                <option value="etc">기타</option>
+            </select><br><br>
+
+            <label for="intro">자기소개:</label><br>
+            <textarea id="intro" name="intro" rows="4" cols="40" placeholder="간단한 자기소개를 입력하세요"></textarea><br><br>
+
+            <input type="submit" value="가입">
+            <input type="reset" value="다시 작성">
+        </fieldset>
+    </form>
+</body>
+</html>
