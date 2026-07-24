@@ -523,3 +523,14 @@ img, video, audio {
     max-width: 100%;
     height: auto;
 }
+#weather-box {
+    margin-top: 12px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+#clock-box {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4A5A8A;
+    margin: 8px 0 12px 0;
+}

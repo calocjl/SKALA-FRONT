@@ -43,9 +43,18 @@
 </main>
 
 <aside>
-<h2>🌤️ 날씨 & 시간</h2>
-<p>서울, 대한민국</p>
-<p>※ 실시간 날씨/시간 기능은 JavaScript를 배운 뒤 추가할 예정입니다.</p>
+<section class="weather-widget">
+    <h2>🌤️ 날씨 & 시간</h2>
+    <div id="clock-box"></div>
+    <select id="city-select">
+        <option value="">도시를 선택하세요</option>
+        <option data-lat="37.5665" data-lon="126.9780">서울</option>
+        <option data-lat="25.0330" data-lon="121.5654">타이베이</option>
+        <option data-lat="51.5074" data-lon="-0.1278">런던</option>
+        <option data-lat="55.9533" data-lon="-3.1883">에딘버러</option>
+    </select>
+    <div id="weather-box">도시를 선택하면 날씨가 표시됩니다.</div>
+</section>
 <section class="mini-tools">
     <h2>🎮 미니 게임 & 도구</h2>
     <button class="tool-btn tool-btn-1" onclick="startUpDown()">Up-Down 게임 시작</button>
@@ -61,5 +70,7 @@
 <script src="../script/upDown.js"></script>
 <script src="../script/grade.js"></script>
 <script src="../script/bag.js"></script>
+<script src="../script/clock.js"></script>
+<script src="../script/realtimeInfo.js"></script>
 </body>
 </html>
