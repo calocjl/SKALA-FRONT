@@ -631,6 +631,23 @@ audio {
     transform-origin: left;
     animation: growBar 1s ease forwards;
 }
+.interest-item {
+    cursor: pointer;
+}
+
+.interest-detail {
+    max-height: 0;
+    overflow: hidden;
+    font-size: 0.85rem;
+    color: #6B7A9E;
+    margin: 0;
+    transition: max-height 0.3s ease, margin-top 0.3s ease;
+}
+
+.interest-item.active .interest-detail {
+    max-height: 100px;
+    margin-top: 8px;
+}
 
 @keyframes growBar {
     from {
@@ -678,4 +695,15 @@ audio {
 .timeline-content p {
     margin: 0;
     color: #3E4A6B;
+}
+.profile-page h2 {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid #E4EAFA;
+}
+
+.profile-page h2:first-of-type {
+    margin-top: 20px;
+    padding-top: 0;
+    border-top: none;
 }

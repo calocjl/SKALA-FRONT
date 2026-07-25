@@ -110,29 +110,35 @@
 <p class="trip-card">제가 제일 좋아하는 동물은 햄스터🐹와 호랑이🐯입니다</p>
 <h2>💡 관심도</h2>
 <div class="interest-bars">
-    <div class="interest-item">
+    <div class="interest-item" onclick="toggleDetail(this)">
         <div class="interest-label"><span>🎨 미술 & 공예</span><span>90%</span></div>
         <div class="interest-bar"><div class="interest-fill" style="width: 90%;"></div></div>
+        <p class="interest-detail">초등학생 때부터 취미로 미술을 해왔고, 대학교에서도 미술동아리 화우회 활동을 했습니다.</p>
     </div>
-    <div class="interest-item">
+    <div class="interest-item" onclick="toggleDetail(this)">
         <div class="interest-label"><span>🏊 수영</span><span>50%</span></div>
         <div class="interest-bar"><div class="interest-fill" style="width: 50%;"></div></div>
+        <p class="interest-detail">예전엔 즐겨했지만, 최근엔 수영할 기회가 잘 없었습니다.</p>
     </div>
-    <div class="interest-item">
-        <div class="interest-label"><span>🕵️ 추리 예능 (더 지니어스, 데블스 플랜)</span><span>75%</span></div>
+    <div class="interest-item" onclick="toggleDetail(this)">
+        <div class="interest-label"><span>🕵️ 추리 예능</span><span>75%</span></div>
         <div class="interest-bar"><div class="interest-fill" style="width: 75%;"></div></div>
+        <p class="interest-detail">더 지니어스, 데블스 플랜처럼 두뇌싸움 예능을 좋아합니다.</p>
     </div>
-    <div class="interest-item">
+    <div class="interest-item" onclick="toggleDetail(this)">
         <div class="interest-label"><span>🏃 런닝맨</span><span>80%</span></div>
         <div class="interest-bar"><div class="interest-fill" style="width: 80%;"></div></div>
+        <p class="interest-detail">심심할 때 여전히 자주 챙겨보는 예능입니다.</p>
     </div>
-    <div class="interest-item">
+    <div class="interest-item" onclick="toggleDetail(this)">
         <div class="interest-label"><span>🐹🐯 햄스터 & 호랑이</span><span>80%</span></div>
         <div class="interest-bar"><div class="interest-fill" style="width: 80%;"></div></div>
+        <p class="interest-detail">인스타 알고리즘이 햄스터 영상으로 도배될 정도로 좋아합니다.</p>
     </div>
-    <div class="interest-item">
+    <div class="interest-item" onclick="toggleDetail(this)">
         <div class="interest-label"><span>😴 낮잠</span><span>70%</span></div>
         <div class="interest-bar"><div class="interest-fill" style="width: 70%;"></div></div>
+        <p class="interest-detail">SKALA를 다니느라 요즘은 낮잠 잘 시간이 없어졌습니다!</p>
     </div>
 </div>
 <h2>📌 활동 이력</h2>
@@ -155,16 +161,17 @@
         <div class="timeline-dot"></div>
         <div class="timeline-content">
             <span class="timeline-date">2026 상반기</span>
-            <p>KOTRA AICE 활동</p>
+            <p>KOTRA AICE 1기 활동</p>
         </div>
     </div>
     <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-content">
             <span class="timeline-date">2026 하반기</span>
-            <p>SKALA 입과</p>
+            <p>SKALA 4기 입과</p>
         </div>
     </div>
 </div>
+<script src="../script/profileDetail.js"></script>
 </body>
 </html>
